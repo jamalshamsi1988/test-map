@@ -1,18 +1,12 @@
-import './App.css';
+import "./App.css";
 
-import MapPage from './components/Map';
-import MapNew from './components/MapNew';
+import MapPage from "./components/Map";
 
 
 function App() {
   return (
     <div className="App">
-    <h1>Map</h1>
-   
-    <MapPage /> 
-   
-   
-  
+      <MapPage />
     </div>
   );
 }
