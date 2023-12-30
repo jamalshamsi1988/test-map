@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactMapGL, {  Marker, Popup } from "react-map-gl";
 import parkDate from "../data/skateboard-parks.json";
-import { Map } from "mapbox-gl";
 
 export default function MapDetailes() {
   const [viewport, setViewport] = useState({
@@ -50,6 +49,7 @@ export default function MapDetailes() {
                 setSelectedPark(park);
               }}
             >
+              {/* <div>🌲</div> */}
               <img src="/skateboarding.svg" alt="Skate Park Icon" />
             </button>
           </Marker>

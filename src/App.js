@@ -7,8 +7,10 @@ function App() {
   return (
     <div className="App">
       <MapPage />
+     
     </div>
   );
 }
 
 export default App;
+

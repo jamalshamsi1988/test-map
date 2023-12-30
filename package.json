@@ -6,6 +6,8 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@turf/buffer": "^6.5.0",
+    "@turf/center": "^6.5.0",
     "@turf/circle": "^6.5.0",
     "@turf/clone": "^6.5.0",
     "@turf/intersect": "^6.5.0",

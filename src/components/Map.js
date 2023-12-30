@@ -1,6 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import ReactMapGL, { MapController, Marker, Popup } from "react-map-gl";
-
 import { Map, View } from "ol";
 import { Tile as TileLayer, Vector as VectorLayer } from "ol/layer";
 import { OSM } from "ol/source";
@@ -8,12 +6,10 @@ import { fromLonLat } from "ol/proj";
 import { GeoJSON } from "ol/format";
 import "ol/ol.css";
 
-import parkDate from "../data/skateboard-parks.json";
 import Mapdetailes from "./MapDetailes";
 
 const MapPage = () => {
   const mapRef = useRef();
-  const [selectedPark, setSelectedPark] = useState();
 
   useEffect(() => {
     if (mapRef.current) {
@@ -35,25 +31,12 @@ const MapPage = () => {
         }),
       });
     }
-
-    const listener = (e) => {
-      if (e.key === "Escape") {
-        setSelectedPark(null);
-      }
-    };
-    window.addEventListener("keydown", listener);
-
-    return () => {
-      window.removeEventListener("keydown", listener);
-    };
   }, []);
 
   return (
     <>
-      <div ref={mapRef} style={{ height: "100vh", width: "100vw" }} />
+      <div ref={mapRef} style={{ height: "100vh", width: "100vw",position:"absolute" }} />
       <Mapdetailes />
-
-  
     </>
   );
 };
