@@ -18,7 +18,7 @@ const MapPage = () => {
   useEffect(() => {
     if (mapRef.current) {
       const vectorLayer = new VectorLayer({
-        // url: "https://openlayers.org/en/latest/examples/data/geojson/countries.geojson",
+        url: "https://openlayers.org/en/latest/examples/data/geojson/countries.geojson",
         format: new GeoJSON(),
       });
       const map = new Map({
